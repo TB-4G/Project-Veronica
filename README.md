@@ -1,2 +1,1 @@
-# Project-Veronica
-Project Veronica is an experimental console simulation environment inspired by next-generation gaming systems. It features a virtual dashboard, simulated boot sequences, system diagnostics, hardware profiles, and game library management, exploring modern console interfaces through an interactive and customizable experience.
+Project Veronica is an experimental Xbox Series emulator currently under development. The project aims to explore console emulation, system architecture, virtual hardware behavior, and interactive gaming environments. Features and compatibility are actively being developed, with the goal of building a powerful and evolving emulation platform.

@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b09">
+  <meta name="description" content="Project Veronica — Experimental Console Simulation Dashboard">
+  <title>VERONICA // Console Environment</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#dashboard" aria-label="Veronica home">
+        <span class="brand-mark">V</span>
+        <span>
+          <strong>VERONICA</strong>
+          <small>PROJECT / 001</small>
+        </span>
+      </a>
+
+      <div class="nav-label">ENVIRONMENT</div>
+      <nav class="navigation" aria-label="Main navigation">
+        <button class="nav-item active" data-page="dashboard">
+          <span>◈</span> Overview
+        </button>
+        <button class="nav-item" data-page="library">
+          <span>▦</span> Game Library
+        </button>
+        <button class="nav-item" data-page="system">
+          <span>⌘</span> System Monitor
+        </button>
+        <button class="nav-item" data-page="settings">
+          <span>⚙</span> Settings
+        </button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <span class="status-dot"></span>
+        <span>SIMULATION ENVIRONMENT</span>
+        <small>BUILD 0.1.0</small>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">PROJECT VERONICA / CONSOLE OS</div>
+          <div class="breadcrumb" id="page-label">Overview</div>
+        </div>
+        <div class="topbar-right">
+          <span class="live-indicator">
+            <span class="status-dot"></span> DEVELOPMENT
+          </span>
+          <div class="avatar">V</div>
+        </div>
+      </header>
+
+      <section class="page active" id="dashboard">
+        <div class="hero">
+          <div class="hero-content">
+            <div class="eyebrow green-text">EXPERIMENTAL ENVIRONMENT</div>
+            <h1>Welcome back<span class="green-text">.</span></h1>
+            <p>
+              A new approach to console simulation.
+              Your experimental environment is ready.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" id="boot-button">
+                <span>▶</span> Initialize System
+              </button>
+              <button class="btn btn-secondary" data-go="system">
+                System Details <span>↗</span>
+              </button>
+            </div>
+          </div>
+          <div class="hero-graphic" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="core-symbol">V</div>
+            <div class="graphic-caption">VERONICA CORE / 01</div>
+          </div>
+          <div class="hero-index">01 — 04</div>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">LIVE OVERVIEW</div>
+            <h2>Environment Status</h2>
+          </div>
+          <span class="subtle-text">SIMULATED DATA</span>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>System State</span><span class="stat-icon">◉</span>
+            </div>
+            <div class="stat-value" id="system-state">STANDBY</div>
+            <div class="stat-note">Virtual environment status</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Core Version</span><span class="stat-icon">⌘</span>
+            </div>
+            <div class="stat-value">0.1.0</div>
+            <div class="stat-note">Experimental release</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Library Items</span><span class="stat-icon">▦</span>
+            </div>
+            <div class="stat-value">03</div>
+            <div class="stat-note">Demo entries available</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Development</span><span class="stat-icon">↗</span>
+            </div>
+            <div class="stat-value green-text">ACTIVE</div>
+            <div class="stat-note">Project status</div>
+          </article>
+        </div>
+
+        <div class="content-grid">
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <div class="eyebrow">SYSTEM PROCESS</div>
+                <h3>Initialization Sequence</h3>
+              </div>
+              <span class="tag" id="boot-tag">IDLE</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="boot-progress"></div>
+            </div>
+            <div class="progress-meta">
+              <span id="boot-message">Awaiting user command</span>
+              <span id="boot-percent">0%</span>
+            </div>
+            <div class="terminal" id="terminal" aria-live="polite">
+              <p><span>[VERONICA]</span> Experimental interface loaded.</p>
+              <p><span>[SYSTEM]</span> Waiting for initialization...</p>
+            </div>
+          </section>
+
+          <section class="panel project-panel">
+            <div class="eyebrow">PROJECT INFORMATION</div>
+            <h3>Development Snapshot</h3>
+            <p class="muted">
+              Veronica is an independent experimental project exploring
+              console-style interfaces and simulation architecture.
+            </p>
+            <div class="info-row">
+              <span>Project</span><strong>Project: Veronica</strong>
+            </div>
+            <div class="info-row">
+              <span>Release</span><strong>v0.1.0</strong>
+            </div>
+            <div class="info-row">
+              <span>Platform</span><strong>Web Preview</strong>
+            </div>
+            <div class="info-row">
+              <span>Compatibility</span><strong>Not implemented</strong>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="page" id="library">
+        <div class="page-intro">
+          <div class="eyebrow">CONTENT MANAGEMENT</div>
+          <h1>Game Library<span class="green-text">.</span></h1>
+          <p>Explore demonstration entries in the virtual library.</p>
+        </div>
+        <div class="library-grid">
+          <article class="game-card">
+            <div class="game-art art-one"><span>01</span><b>VE</b></div>
+            <div class="game-info">
+              <div><h3>Veronica Experience</h3><p>Interface Demo</p></div>
+              <span class="tag">DEMO</span>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-art art-two"><span>02</span><b>NX</b></div>
+            <div class="game-info">
+              <div><h3>Neon Horizon</h3><p>Placeholder Entry</p></div>
+              <span class="tag">DEMO</span>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-art art-three"><span>03</span><b>OR</b></div>
+            <div class="game-info">
+              <div><h3>Orbit Protocol</h3><p>Placeholder Entry</p></div>
+              <span class="tag">DEMO</span>
+            </div>
+          </article>
+        </div>
+        <p class="muted note">
+          All library entries are placeholders. No game files are included or executed.
+        </p>
+      </section>
+
+      <section class="page" id="system">
+        <div class="page-intro">
+          <div class="eyebrow">DIAGNOSTICS / VIRTUAL PROFILE</div>
+          <h1>System Monitor<span class="green-text">.</span></h1>
+          <p>Illustrative configuration for the experimental environment.</p>
+        </div>
+        <section class="panel">
+          <div class="panel-heading">
+            <h3>Virtual Hardware Profile</h3>
+            <span class="tag">PLACEHOLDER</span>
+          </div>
+          <div class="info-row"><span>Emulation Target</span><strong>Xbox Series family (planned)</strong></div>
+          <div class="info-row"><span>CPU Model</span><strong>Not implemented</strong></div>
+          <div class="info-row"><span>GPU Backend</span><strong>Not implemented</strong></div>
+          <div class="info-row"><span>Memory Model</span><strong>Not implemented</strong></div>
+          <div class="info-row"><span>Game Compatibility</span><strong>None implemented</strong></div>
+          <div class="info-row"><span>Environment</span><strong id="monitor-state">Standby</strong></div>
+        </section>
+      </section>
+
+      <section class="page" id="settings">
+        <div class="page-intro">
+          <div class="eyebrow">PREFERENCES</div>
+          <h1>Settings<span class="green-text">.</span></h1>
+          <p>Configure the dashboard appearance.</p>
+        </div>
+        <section class="panel">
+          <div class="setting-row">
+            <div><h3>Interface Effects</h3><p class="muted">Enable animated visual effects.</p></div>
+            <label class="switch">
+              <input type="checkbox" id="effects-toggle" checked>
+              <span class="switch-track"></span>
+              <span class="sr-only">Enable interface effects</span>
+            </label>
+          </div>
+          <div class="setting-row">
+            <div><h3>Accent Color</h3><p class="muted">Choose the dashboard highlight.</p></div>
+            <select id="accent-select" aria-label="Accent color">
+              <option value="green">Veronica Green</option>
+              <option value="cyan">Signal Cyan</option>
+              <option value="amber">Alert Amber</option>
+            </select>
+          </div>
+          <div class="setting-row">
+            <div><h3>Reset Session</h3><p class="muted">Return the interface to standby.</p></div>
+            <button class="btn btn-secondary" id="reset-button">Reset</button>
+          </div>
+        </section>
+      </section>
+
+      <footer class="footer">
+        <span>PROJECT: VERONICA <span class="green-text">■</span> EXPERIMENTAL BUILD</span>
+        <span>INDEPENDENT PROJECT · NOT AFFILIATED WITH XBOX</span>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
